@@ -1,0 +1,78 @@
+{{extend 'layout.html'}}
+
+<div class="row">
+	<div class="span4 offset5">
+		<a class="pull-right" href="{{=URL('paypal','set_express_checkout')}}">Compre com:<!-- PayPal Logo --> <img src="https://www.paypalobjects.com/webstatic/mktg/br/botao-checkout_horizontal_ap.png" border="0"><!-- PayPal Logo --></a>
+	</div>
+	<div class="span1"></div>
+	<div class="span2">
+		<a href="#" class="btn btn-large btn-success">Finalizar Pedido</a>
+	</div>
+</div>
+<div class="row">
+	<div class="span12">
+		<table class="table table-hover">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Produto</th>
+				<th>Quantidade</th>
+				<th>Valor Unitario</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>Tablet Phaser Kinno II PC713 com Tela 7"</td>
+				<td>
+					<select>		
+					  <option value="1">1</option>
+					  <option value="2">2</option>
+					  <option value="3">3</option>
+					  <option value="4">4</option>
+					  <option value="5">5</option>
+					</select>
+				</td>
+				<td>236,00</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Celular Desbloqueado CCE Motion Plus SK351 Preto com Dual Chip</td>
+				<td>
+					<select>	
+					  <option value="1">1</option>
+					  <option value="2">2</option>
+					  <option value="3">3</option>
+					  <option value="4">4</option>
+					  <option value="5">5</option>
+					</select>
+				</td>
+				<td>249,00</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>Pen Drive SanDisk Cruzer Pop 8GB - Preto</td>
+				<td>
+					<select>
+					  <option value="1">1</option>
+					  <option value="2">2</option>
+					  <option value="3">3</option>
+					  <option value="4">4</option>
+					  <option value="5">5</option>
+					</select>
+				</td>
+				<td>22,00</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+</div>
+<!-- <div class="row">
+	<div class="span4 offset5">
+		<a class="pull-right" href="">Compre com:<img src="https://www.paypalobjects.com/webstatic/mktg/br/botao-checkout_horizontal_ap.png" border="0"></a>
+	</div>
+	<div class="span1"></div>
+	<div class="span2">
+		<a href="#" class="btn btn-large btn-success">Finalizar Pedido</a>
+	</div>
+</div> -->

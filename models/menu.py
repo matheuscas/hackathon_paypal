@@ -5,8 +5,8 @@
 ## Customize your APP title, subtitle and menus here
 #########################################################################
 
-response.logo = A(B('web',SPAN(2),'py'),XML('&trade;&nbsp;'),
-                  _class="brand",_href="http://www.web2py.com/")
+response.logo = A(B('Hackathon PayPal'),
+                  _class="brand",_href="https://www.paypal-brasil.com.br/forum/index.php?/topic/299-regulamento-paypal-hackathon/")
 response.title = request.application.replace('_',' ').title()
 response.subtitle = ''
 
@@ -24,10 +24,10 @@ response.google_analytics_id = None
 #########################################################################
 
 response.menu = [
-    (T('Home'), False, URL('default', 'index'), [])
+    (T('Home'), False, URL('paypal', 'index'), [])
 ]
 
-DEVELOPMENT_MENU = True
+DEVELOPMENT_MENU = False
 
 #########################################################################
 ## provide shortcuts for development. remove in production

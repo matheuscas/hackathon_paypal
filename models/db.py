@@ -63,9 +63,19 @@ auth.settings.reset_password_requires_verification = True
 from gluon.contrib.login_methods.rpx_account import use_janrain
 use_janrain(auth, filename='private/janrain.key')
 
+paypal_email_id = 'vendendor_teste@server.com'
 paypal_username = 'vendendor_teste_api1.server.com'
 paypal_password = '1391013647'
 paypal_signature = 'ASm.sKJEh.DnY0UEzNUv2LFZTa.JAk96H3-ZShBMx8hMy.VVax83UO7k'
+sandbox = 'https://api-3t.sandbox.paypal.com/nvp'
+paypalURL = 'https://www.sandbox.paypal.com/cgi-bin/webscr'
+
+basic_request = {
+    'USER':paypal_username,
+    'PWD':paypal_password,
+    'SIGNATURE':paypal_signature,
+    'VERSION':'108.0'
+}
 
 #########################################################################
 ## Define your tables below (or better in another model file) for example
