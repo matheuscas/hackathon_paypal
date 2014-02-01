@@ -24,7 +24,8 @@ response.google_analytics_id = None
 #########################################################################
 
 response.menu = [
-    (T('Home'), False, URL('paypal', 'index'), [])
+    (T('Home'), False, URL('paypal', 'index'), []),
+    (T('IPN'), False, URL('paypal', 'ipn_get'), [])
 ]
 
 DEVELOPMENT_MENU = False

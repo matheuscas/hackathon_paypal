@@ -69,7 +69,7 @@ paypal_password = '1391013647'
 paypal_signature = 'ASm.sKJEh.DnY0UEzNUv2LFZTa.JAk96H3-ZShBMx8hMy.VVax83UO7k'
 sandbox = 'https://api-3t.sandbox.paypal.com/nvp'
 paypalURL = 'https://www.sandbox.paypal.com/cgi-bin/webscr'
-url_prefix_sandbox = 'http://127.0.0.1:8000'
+url_prefix_sandbox = 'http://' + request.env.HTTP_HOST
 
 
 basic_request = {
