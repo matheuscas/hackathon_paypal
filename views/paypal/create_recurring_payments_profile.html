@@ -1,0 +1,11 @@
+{{extend 'layout.html'}}
+
+<h1>Assinatura confirmada com sucesso</h1>
+
+{{=BEAUTIFY(details)}}
+
+<div class="row">	
+	<div class="span4">
+		<a href="{{=URL('paypal','index')}}" class="btn btn-large btn-success">Retornar ao inicio</a>
+	</div>
+</div>

@@ -9,6 +9,9 @@
 ## be redirected to HTTPS, uncomment the line below:
 # request.requires_https()
 
+print request.env.domain
+print '--------------------------------------------------'
+
 if not request.env.web2py_runtime_gae:
     ## if NOT running on Google App Engine use SQLite or other DB
     db = DAL('sqlite://storage.sqlite',pool_size=1,check_reserved=['all'])
@@ -69,6 +72,8 @@ paypal_password = '1391013647'
 paypal_signature = 'ASm.sKJEh.DnY0UEzNUv2LFZTa.JAk96H3-ZShBMx8hMy.VVax83UO7k'
 sandbox = 'https://api-3t.sandbox.paypal.com/nvp'
 paypalURL = 'https://www.sandbox.paypal.com/cgi-bin/webscr'
+url_prefix_sandbox = 'http://127.0.0.1:8000'
+
 
 basic_request = {
     'USER':paypal_username,
