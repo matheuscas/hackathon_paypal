@@ -17,7 +17,10 @@ def compras_finalizacao():
 	return dict()
 
 def pagina_produto():
-	return dict()	
+	return dict()
+
+def pagina_assinatura():
+	return dict()		
 
 def estorno():
 	response.title = 'Estorno de transacao'

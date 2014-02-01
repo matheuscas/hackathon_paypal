@@ -1,0 +1,38 @@
+{{extend 'layout.html'}}
+
+<airticle class="article">
+          <div class="row bottom-space">
+            <div class="span12">
+              <div class="page-header">
+                <h1>INFO <small>R$ 100,00</small></h1>
+              </div>
+            </div>
+            <!-- <div class="span12 center-align">
+              <img src="http://placehold.it/800x300" class="thumbnail product-snap">            
+            </div> -->
+          </div>
+          <div class="row">
+            <div class="span10 offset1">
+              <p>
+                NFO é a revista referência para quem quer saber mais sobre tendências e inovações em tecnologia, ciências, cultura e empreendedorismo digitais.
+                É a inspiração para quem quer entender - de um jeito instigante e bem humorado - o impacto que essas inovações terão em nossas vidas. Assine. 
+              </p>                                         
+            </div>      
+          </div>
+          <div class="row">
+            <div class="span10 offset1">
+              <hr>
+              <div class="span3">
+                <p>
+                  Colocar no carrinho!
+                </p>
+                <a class="btn btn-block btn-success" href="#"	>Assinar</a>
+              </div>
+              <div class="span3">
+                  <a class="pull-right" href="{{=URL('paypal','set_express_checkout_to_subscription')}}">Assinar agora com:<!-- PayPal Logo --> <img src="https://www.paypalobjects.com/webstatic/mktg/br/botao-checkout_horizontal_ap.png" border="0"><!-- PayPal Logo --></a>
+              </div>                            
+            </div>
+          </div>
+        </airticle>
+        <!-- End: Product description -->
+      </div>
