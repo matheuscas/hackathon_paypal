@@ -261,8 +261,23 @@ def __response_details_to_dict(raw_text_response):
 	return dictt
 
 def ipn_post():
-	pass
+	if request.vars.test_ipn and request.vars.test_ipn == '1':
+		endpoint = '/cgi-bin/webscr?cmd=_notify-validate'
+		r = requests.get(paypalURL + endpoint, params=request.vars)
+		if 'VERIFIED' in r.text:
+			rows = db(db.ipn.chave == request.vars.hash).select()
+			if len(rows) == 0:
+				db.ipn.insert(txn_id=request.vars.txn_id,
+							txn_type=request.vars.txn_type,
+							receiver_email=request.vars.receiver_email,
+							payment_status=request.vars.payment_status,
+							pending_reason=request.vars.pending_reason,
+							reason_code=request.vars.reason_code,
+							custom=request.vars.payment_status,
+							invoice=request.vars.invoice,
+							notification=request.vars.notification
+					)
 
 def ipn_get():
-	pass			
+	return dict(rows=db(db.ipn.id > 0).select())			
 						

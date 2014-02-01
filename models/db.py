@@ -9,9 +9,6 @@
 ## be redirected to HTTPS, uncomment the line below:
 # request.requires_https()
 
-print request.env.domain
-print '--------------------------------------------------'
-
 if not request.env.web2py_runtime_gae:
     ## if NOT running on Google App Engine use SQLite or other DB
     db = DAL('sqlite://storage.sqlite',pool_size=1,check_reserved=['all'])
@@ -98,6 +95,20 @@ basic_request = {
 ## >>> rows=db(db.mytable.myfield=='value').select(db.mytable.ALL)
 ## >>> for row in rows: print row.id, row.myfield
 #########################################################################
+
+db.define_table('post',Field('num','integer'))
+db.define_table('ipn',
+    Field('txn_id','integer'),
+    Field('txn_type','string'),
+    Field('receiver_email','string'),
+    Field('payment_status','string'),
+    Field('pending_reason','string'),
+    Field('reason_code','string'),
+    Field('custom','string'),
+    Field('invoice','string'),
+    Field('notification','string'),
+    Field('chave','string')
+)
 
 ## after defining tables, uncomment below to enable auditing
 # auth.enable_record_versioning(db)
