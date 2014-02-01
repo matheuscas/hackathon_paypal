@@ -2,4 +2,23 @@
 
 <h1>Central de Notificacoes</h1>
 
-{{=BEAUTIFY(rows)}}
+<table class="table">
+	<thead>
+		<tr>
+		<th>TXN_ID</th>
+		<th>TXN_TYPE</th>
+		<th>RECEIVER_EMAIL</th>
+		<th>STATUS</th>
+		</tr>
+	</thead>
+	<tbody>
+		{{for r in rows:}}
+		<tr>
+			<td>{{=r.txn_id}}</td>
+			<td>{{=r.txn_type}}</td>
+			<td>{{=r.receiver_email}}</td>
+			<td>{{=r.payment_status}}</td>
+		</tr>
+		{{pass}}
+	</tbody>
+</table>
