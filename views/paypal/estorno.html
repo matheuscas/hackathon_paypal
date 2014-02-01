@@ -1,0 +1,9 @@
+{{extend 'layout.html'}}
+
+<div class="row">
+	<form action="{{=URL('paypal','refund')}}">
+		<label for="">Transaction ID:</label><input type="text" name="transaction" id="transaction_id">
+		<br>
+		<button  class="btn btn-danger" type="submit">Estornar</button>
+	</form>
+</div>

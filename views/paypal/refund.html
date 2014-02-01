@@ -1,0 +1,14 @@
+{{extend 'layout.html'}}
+
+<h1>Resultado do estorno</h1>
+
+{{=BEAUTIFY(details)}}
+
+<div class="row">	
+	<div class="span3">
+		<a href="{{=URL('paypal','index')}}" class="btn btn-large btn-success">Retornar ao inicio</a>
+	</div>
+	<div class="span3">
+		<a href="{{=URL('paypal','estorno')}}" class="btn btn-large btn-warning">Fazer novo estorno</a>
+	</div>
+</div>
