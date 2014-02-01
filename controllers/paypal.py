@@ -86,7 +86,8 @@ def set_express_checkout():
 	res = r.text.split('&')
 	token_part = res[0]
 	token = token_part.split('=')[1]
-	redirect(paypalURL+'?'+'cmd=_express-checkout&token='+token)
+	return A('clique aqui', _href=paypalURL+'?'+'cmd=_express-checkout&token='+token)
+	#redirect(paypalURL+'?'+'cmd=_express-checkout&token='+token)
 
 def set_express_checkout_to_subscription():
 	basic_data = basic_request
@@ -239,7 +240,7 @@ def create_recurring_payments_profile():
 	r = requests.get(sandbox, params=basic_data)
 	return dict(details=__response_details_to_dict(r.text))
 
-def refund():
+def refund():	
 	basic_data = basic_request
 	refund_data = {
 		'METHOD':'RefundTransaction', 
@@ -256,6 +257,10 @@ def __response_details_to_dict(raw_text_response):
 	for part in splited:
 		key = part.split('=')[0]
 		value = part.split('=')[1].replace('%2e','.')
+		value = value.replace('%20',' ')
+		value = value.replace('%40','@')
+		value = value.replace('%2d','-')
+		value = value.replace('%3a',':')
 		dictt[key] = value
 
 	return dictt

@@ -1,6 +1,49 @@
 {{extend 'layout.html'}}
 
-{{=BEAUTIFY(details)}}
+<h1>Confirmacao da assinatura</h1>
+
+<table class="table table-striped table-hover">	
+	<tbody>
+		<thead>
+			<tr>
+				<th></th>
+				<th></th>
+			</tr>
+		</thead>
+		<tr>
+			<td>TOTAL DA ASSINATURA</td>
+			<td>{{=details['AMT']}}</td>
+		</tr>
+		<tr>
+			<td>DESCRICAO</td>
+			<td>{{=details['L_DESC0']}}</td>
+		</tr>
+		<tr>
+			<td>CATEGORIA</td>
+			<td>{{=details['L_PAYMENTREQUEST_0_ITEMCATEGORY0']}}</td>
+		</tr>
+		<tr>
+			<td>CIDADE DE ENTREGA</td>
+			<td>{{=details['SHIPTOCITY']}}</td>
+		</tr>
+		<tr>
+			<td>PAIS DE ENTREGA</td>
+			<td>{{=details['SHIPTOCOUNTRYNAME']}}</td>
+		</tr>
+		<tr>
+			<td>ESTADO DE ENTREGA</td>
+			<td>{{=details['SHIPTOSTATE']}}</td>
+		</tr>
+		<tr>
+			<td>RUA DE ENTREGA</td>
+			<td>{{=details['SHIPTOSTREET']}}</td>
+		</tr>
+		<tr>
+			<td>CEP DE ENTREGA</td>
+			<td>{{=details['SHIPTOZIP']}}</td>
+		</tr>
+	</tbody>
+</table>
 
 <div class="row">	
 	<div class="span4">
