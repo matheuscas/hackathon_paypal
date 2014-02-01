@@ -86,8 +86,10 @@ def set_express_checkout():
 	res = r.text.split('&')
 	token_part = res[0]
 	token = token_part.split('=')[1]
-	return A('clique aqui', _href=paypalURL+'?'+'cmd=_express-checkout&token='+token)
-	#redirect(paypalURL+'?'+'cmd=_express-checkout&token='+token)
+	#return A('clique aqui', _href=paypalURL+'?'+'cmd=_express-checkout&token='+token)
+	#teste = 'https://www.sandbox.paypal.com/incontext?token='+token
+	redirect(paypalURL+'?'+'cmd=_express-checkout&token='+token)
+	#redirect(teste)
 
 def set_express_checkout_to_subscription():
 	basic_data = basic_request

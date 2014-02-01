@@ -1,6 +1,18 @@
 {{extend 'layout.html'}}
 
-{{=BEAUTIFY(details)}}
+<h1>Confirmacao do pedido</h1>
+
+<h2>{{=details['L_NAME0']}}</h2>
+<label for=""><strong>DESCRICAO:</strong></label><span>{{=details['L_PAYMENTREQUEST_0_DESC0']}}</span>
+<label for=""><strong>VALOR UNITARIO:</strong></label><span>{{=details['L_PAYMENTREQUEST_0_AMT0']}}</span>
+<label for=""><strong>QUANTIDADE:</strong></label><span>{{=details['L_PAYMENTREQUEST_0_QTY0']}}</span>
+
+<hr>
+
+<h3>TOTAL:</h3>
+<h4>{{=details['PAYMENTREQUEST_0_AMT']}}</h4>
+
+<hr>
 
 <div class="row">	
 	<div class="span4">		
